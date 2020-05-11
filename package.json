@@ -1,0 +1,31 @@
+{
+  "name": "shappes-widget",
+  "version": "0.0.1",
+  "description": "Integrate shappes service fast",
+  "main": "lib/index.js",
+  "module": "lib/index.mjs",
+  "unpkg": "lib/index.min.mjs",
+  "repository": "https://github.com/Shappes-io/shappes-widget",
+  "author": "Iddar Olivares",
+  "license": "MIT",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "build": "rimraf lib && rollup -c",
+    "tsc": "tsc",
+    "serv": "echo 'run: http://localhost:8000/example' && python -m SimpleHTTPServer 8000"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "glob": "^7.1.6",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.9.0",
+    "rollup-plugin-babel-minify": "^10.0.0",
+    "rollup-plugin-postcss-modules": "^2.0.1",
+    "rollup-plugin-typescript2": "^0.27.0",
+    "typescript": "^3.8.3"
+  }
+}
