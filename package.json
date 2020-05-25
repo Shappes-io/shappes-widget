@@ -5,7 +5,12 @@
   "main": "lib/index.js",
   "module": "lib/index.mjs",
   "unpkg": "lib/index.min.mjs",
+  "types": "lib/index.d.ts",
   "repository": "https://github.com/Shappes-io/shappes-widget",
+  "bugs": {    
+    "url": "https://github.com/Shappes-io/shappes-widget/issues"  
+  },  
+  "homepage": "https://github.com/Shappes-io/shappes-widget#readme",
   "author": "Iddar Olivares",
   "license": "MIT",
   "type": "module",
