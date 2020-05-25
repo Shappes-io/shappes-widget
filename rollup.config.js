@@ -1,16 +1,15 @@
 import typescript from 'rollup-plugin-typescript2'
 import minify from 'rollup-plugin-babel-minify'
 import postcss from 'rollup-plugin-postcss-modules'
-
 import fs from 'fs'
 import glob from 'glob'
 
 /* initialize CSS files because of a catch-22 situation:
-   https://github.com/rollup/rollup/issues/1404 */
+https://github.com/rollup/rollup/issues/1404 */
 glob.sync('src/**/*.css').forEach((css) => {  // Use forEach because https://github.com/rollup/rollup/issues/1873
-	const definition = `${css}.d.ts`
-	if (!fs.existsSync(definition))
-		fs.writeFileSync(definition, 'const mod: { [cls: string]: string }\nexport default mod\n')
+  const definition = `${css}.d.ts`
+  // if (!fs.existsSync(definition))
+  fs.writeFileSync(definition, 'const mod: { [cls: string]: string }\nexport default mod\n')
 })
 
 const getConfig = ({ output, isMinify, extract = false }) => {

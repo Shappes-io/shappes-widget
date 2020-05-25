@@ -8,6 +8,7 @@
   "repository": "https://github.com/Shappes-io/shappes-widget",
   "author": "Iddar Olivares",
   "license": "MIT",
+  "type": "module",
   "files": [
     "lib",
     "src"
@@ -15,17 +16,32 @@
   "scripts": {
     "build": "rimraf lib && rollup -c",
     "tsc": "tsc",
-    "serv": "echo 'run: http://localhost:8000/example' && python -m SimpleHTTPServer 8000"
+    "serv": "parcel example/index.html",
+    "watch-css": "inotifywait -qm -e close_write,moved_to,create --format '%w' src/**/*.css"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
+    "autoprefixer": "^9.8.0",
+    "chokidar": "^3.4.0",
     "glob": "^7.1.6",
+    "parcel-bundler": "^1.12.4",
     "rimraf": "^3.0.2",
     "rollup": "^2.9.0",
     "rollup-plugin-babel-minify": "^10.0.0",
     "rollup-plugin-postcss-modules": "^2.0.1",
     "rollup-plugin-typescript2": "^0.27.0",
+    "typed-css-modules": "^0.6.4",
     "typescript": "^3.8.3"
+  },
+  "browserslist": [
+    "last 2 Chrome versions"
+  ],
+  "postcss": {
+    "modules": true,
+    "plugins": {
+      "autoprefixer": {
+        "grid": true
+      }
+    }
   }
 }

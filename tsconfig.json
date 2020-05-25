@@ -1,7 +1,7 @@
 {
 	"extends": "./tsconfig.base",
 	"compilerOptions": {
-		"target": "es6",
+		"target": "ES2018",
 		"noImplicitAny": true,
 		"sourceMap": true,
 		"noUnusedParameters": true,

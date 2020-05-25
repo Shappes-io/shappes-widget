@@ -3,3 +3,6 @@ node_modules
 /gh-pages/
 example
 /src/**/*.css.d.ts
+dist
+.vscode
+.cache
