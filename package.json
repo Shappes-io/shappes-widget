@@ -1,6 +1,6 @@
 {
   "name": "shappes-widget",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Integrate shappes service fast",
   "main": "lib/index.js",
   "module": "lib/index.mjs",
